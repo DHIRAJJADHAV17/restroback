@@ -1,5 +1,4 @@
 import express from "express";
-import AccessToken from "../middleware/AccessToken";
 import { param } from "express-validator";
 import RestroController from "../controllers/RestroController";
 

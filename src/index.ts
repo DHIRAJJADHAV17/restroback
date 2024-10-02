@@ -1,23 +1,18 @@
-import express, { Request, Response } from "express";
 import cors from "cors";
 import "dotenv/config";
+import express, { Request, Response } from "express";
 import mongoose from "mongoose";
+import swaggerJsDoc from "swagger-jsdoc";
+import swaggerUi from "swagger-ui-express";
 import AdminRoutes from "./routes/MyAdminRoutes";
 import RestroRoutes from "./routes/MyRestroRoutes";
 import Restro from "./routes/RestroRoute";
-import swaggerJsDoc from "swagger-jsdoc";
-import swaggerUi from "swagger-ui-express";
-import AWS from "aws-sdk";
-import multer, { FileFilterCallback } from "multer";
-import multerS3 from "multer-s3";
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 
 // Configure multer to use S3
 
 mongoose
   .connect(process.env.MONGODB_CONNECTION as string)
   .then(() => console.log("connected to database"));
-
 
 const app = express();
 app.use(express.json());

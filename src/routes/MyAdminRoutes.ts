@@ -94,7 +94,7 @@ const router = express.Router();
  *                 error: "Unauthorized access"
  */
 
-router.post("/login", MyAdminController.getAdmin);
+// router.post("/login", MyAdminController.getAdmin);
 
 /**
  * @swagger
@@ -114,6 +114,6 @@ router.post("/login", MyAdminController.getAdmin);
  *       400:
  *         description: error in creating admin
  */
-router.post("/signup", MyAdminController.createAdmin);
+// router.post("/signup", MyAdminController.createAdmin);
 
 export default router;

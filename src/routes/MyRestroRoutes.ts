@@ -251,12 +251,12 @@ const upload = multer({
  *         description: Bad request Unauthorized
  */
 
-router.post(
-  "/manage",
-  upload.single("imageFile"),
-  AccessToken,
-  MyRestroController.createMyRestro
-);
+// router.post(
+//   "/manage",
+//   upload.single("imageFile"),
+//   AccessToken,
+//   MyRestroController.createMyRestro
+// );
 
 /**
  * @swagger
@@ -340,11 +340,11 @@ router.get(
  *       500:
  *         description: Bad request
  */
-router.put(
-  "/manage",
-  upload.single("imageFile"),
-  AccessToken,
-  MyRestroController.updateMyRestaurant
-);
+// router.put(
+//   "/manage",
+//   upload.single("imageFile"),
+//   AccessToken,
+//   MyRestroController.updateMyRestaurant
+// );
 
 export default router;
